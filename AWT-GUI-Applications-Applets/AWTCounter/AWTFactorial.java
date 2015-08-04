@@ -27,7 +27,7 @@ package graphics.programming.exercises;
 import java.awt.*;
 import java.awt.event.*;
 
-public class AWTCounter extends Frame implements ActionListener {
+public class AWTFactorial extends Frame implements ActionListener {
 
 	private Label nLbl; // declare component Label
 	private TextField nTextField; // declare component TextField
@@ -103,7 +103,7 @@ public class AWTCounter extends Frame implements ActionListener {
 	}
 
 	public static void main(String... args) {
-		new AWTCounter(); // Invoke the constructor by allocating an anonymous instance
+		new AWTFactorial(); // Invoke the constructor by allocating an anonymous instance
 	}
 
 }
