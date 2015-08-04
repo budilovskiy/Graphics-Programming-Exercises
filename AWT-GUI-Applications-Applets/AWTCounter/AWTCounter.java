@@ -42,7 +42,6 @@ public class AWTCounter extends Frame implements ActionListener {
 		lblCount = new Label("n");		// creating label
 		this.add(lblCount);			// adding label to "this" Frame
 		
-		n = 88;
 		nTextField = new TextField(n + "", 10);	// creating TextField which contents value of count variable
 							// and with width 10 symbols
 		nTextField.setEditable(false);		// making TextField non-editable
@@ -64,7 +63,7 @@ public class AWTCounter extends Frame implements ActionListener {
 	// ActionEvent handler - Called back when the button has been clicked.
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		n--;					// decrease value of count variable by 1
+		n++;					// increase value of count variable by 1
 		nTextField.setText(n + "");		// display count on the TextField as a String
 	}
 	
