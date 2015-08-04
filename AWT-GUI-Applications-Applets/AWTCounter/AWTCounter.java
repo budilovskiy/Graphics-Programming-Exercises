@@ -29,59 +29,75 @@ import java.awt.event.*;
 
 public class AWTCounter extends Frame implements ActionListener {
 
-	private Label nLbl;					// declare component Label
-	private TextField nTextField;		// declare component TextField
-	private Label factLbl;				// declare component Label
-	private TextField factTextField;	// declare component TextField
-	private Button btnCount;			// declare component Button
-	private int n;						// n value
+	private Label nLbl; // declare component Label
+	private TextField nTextField; // declare component TextField
+	private Label factLbl; // declare component Label
+	private TextField factTextField; // declare component TextField
+	private Button btnCount; // declare component Button
+	private int n; // n value
 
 	// Constructor to setup UI components
 	public AWTCounter() {
 		// setting Layout to "this" Frame child-class
 		this.setLayout(new FlowLayout());
-		
-		nLbl = new Label("n");						// creating label
-		this.add(nLbl);								// adding label to "this" Frame
-		
-		n=1;
-		nTextField = new TextField(n + "", 10);		// creating TextField which contents value of count variable and with width 10 symbols
-		nTextField.setEditable(true);				// making TextField non-editable
-		this.add(nTextField);						// adding TextField to "this" Frame
-		
-		factLbl = new Label("factorial(n)");		// creating label
-		this.add(factLbl);							// adding label to "this" Frame
-		
-		factTextField = new TextField(factorial(n) + "", 10);	// creating TextField which contents
-																// factorial of n and with width 10 symbols
-		factTextField.setEditable(false);						// making TextField non-editable
-		this.add(factTextField);								// adding TextField to "this" Frame
-		
-		btnCount = new Button("Next");				// creating button
-		this.add(btnCount);							// adding TextField to "this" Frame
-		btnCount.addActionListener(this);			// btnCount is a source that fires ActionEvent when clicked.
-													// The source add "this" object as a listener, which provides
-											        // the ActionEvent handler called actionPerformed().
-											        // Clicking btnCount invokes actionPerformed().
-		
-		this.setSize(400, 80);						// set size of "this" Frame
-		this.setTitle("AWTCounter");				// set title of "this" Frame
-		this.setVisible(true);						// show "this" Frame
-		
+
+		nLbl = new Label("n"); // creating label
+		this.add(nLbl); // adding label to "this" Frame
+
+		n = 1;
+		nTextField = new TextField(n + "", 10); // creating TextField which
+												// contents value of count
+												// variable and with width 10
+												// symbols
+		nTextField.setEditable(true); // making TextField non-editable
+		this.add(nTextField); // adding TextField to "this" Frame
+
+		factLbl = new Label("factorial(n)"); // creating label
+		this.add(factLbl); // adding label to "this" Frame
+
+		factTextField = new TextField(factorial(n) + "", 10); // creating
+																// TextField
+																// which
+																// contents
+																// factorial of
+																// n and with
+																// width 10
+																// symbols
+		factTextField.setEditable(false); // making TextField non-editable
+		this.add(factTextField); // adding TextField to "this" Frame
+
+		btnCount = new Button("Next"); // creating button
+		this.add(btnCount); // adding TextField to "this" Frame
+		btnCount.addActionListener(this); // btnCount is a source that fires
+											// ActionEvent when clicked.
+											// The source add "this" object as a
+											// listener, which provides
+											// the ActionEvent handler called
+											// actionPerformed().
+											// Clicking btnCount invokes
+											// actionPerformed().
+
+		this.setSize(400, 80); // set size of "this" Frame
+		this.setTitle("AWTCounter"); // set title of "this" Frame
+		this.setVisible(true); // show "this" Frame
+
 	}
-	
+
 	// ActionEvent handler - Called back when the button has been clicked.
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		n++;										// increase value of count variable by 1
-		nTextField.setText(n + "");					// display value of n on the TextField as a String
-		factTextField.setText(factorial(n) + "");	// display factorial of n on the TextField as a String
+		n++; // increase value of count variable by 1
+		nTextField.setText(n + ""); // display value of n on the TextField as a
+									// String
+		factTextField.setText(factorial(n) + ""); // display factorial of n on
+													// the TextField as a String
 	}
-	
+
 	/**
 	 * Calculating factorial of given number
 	 * 
-	 * @param n - number to calculate it's factorial
+	 * @param n
+	 *            - number to calculate it's factorial
 	 * @return factorial of number
 	 */
 	private long factorial(int n) {
@@ -91,9 +107,10 @@ public class AWTCounter extends Frame implements ActionListener {
 		}
 		return fact;
 	}
-	
+
 	public static void main(String... args) {
-		new AWTCounter();							// Invoke the constructor by allocating an anonymous instance
+		new AWTCounter(); // Invoke the constructor by allocating an anonymous
+							// instance
 	}
 
 }
