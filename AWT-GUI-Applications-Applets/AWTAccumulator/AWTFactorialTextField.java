@@ -48,9 +48,9 @@ public class AWTFactorialTextField extends Frame {
 		
 		tfInput = new TextField(10); // allocate
 		// tfInput is a source that fires ActionEvent when entered.
-        // The source add anonymous ActionEvent object as a listener, 
+        	// The source add anonymous ActionEvent object as a listener, 
 		// which provides an ActionEvent handler called actionPerformed().
-        // Hitting enter key on tfInput invokes actionPerformed().
+        	// Hitting enter key on tfInput invokes actionPerformed().
 		tfInput.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
