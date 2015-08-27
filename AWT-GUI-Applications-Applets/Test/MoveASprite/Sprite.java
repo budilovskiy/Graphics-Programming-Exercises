@@ -1,4 +1,4 @@
-package customgraphics;
+package customgraphics2;
 
 import java.awt.Color;
 import java.awt.Graphics;
