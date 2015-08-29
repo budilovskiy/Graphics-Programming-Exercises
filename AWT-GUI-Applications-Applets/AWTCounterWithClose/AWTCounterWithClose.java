@@ -67,11 +67,11 @@ public class AWTCounterWithClose extends Frame implements ActionListener,
 
 	@Override
 	public void windowClosed(WindowEvent e) {
-		System.exit(0);
 	}
 
 	@Override
 	public void windowClosing(WindowEvent e) {
+		System.exit(0);
 	}
 
 	@Override
