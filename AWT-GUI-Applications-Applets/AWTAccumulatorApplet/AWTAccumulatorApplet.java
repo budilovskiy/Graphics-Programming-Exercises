@@ -5,6 +5,9 @@
  * 2. a TextField for user to enter a number.
  * 3. The applet shall accumulate all the integers entered and show it on 
  * 		the status bar of the browser's window.
+ * TRY:
+ * Modify the applet to run the "Counter" application (as in AWTCounter).
+ * Modify the applet to run the "Factorial" application (as in AWTFactorial).
  */
 package graphics.programming.exercises;
 
