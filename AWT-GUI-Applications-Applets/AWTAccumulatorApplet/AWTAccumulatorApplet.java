@@ -17,7 +17,7 @@ import java.awt.event.ActionListener;
 @SuppressWarnings("serial")
 public class AWTAccumulatorApplet extends Applet implements ActionListener {
 	
-	private TextField tfInput;	// input TextField
+	private TextField tfInput; // input TextField
 	private int number; // entered number
 	private int sum = 0; // accumulated sum
 	
