@@ -35,7 +35,7 @@ public class AWTCounter extends Frame implements ActionListener {
 	private int n;			// n value
 
 	// Constructor to setup UI components
-	public AWTCounterDown() {
+	public AWTCounter() {
 		// setting Layout to "this" Frame child-class
 		this.setLayout(new FlowLayout());
 		
