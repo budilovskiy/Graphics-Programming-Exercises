@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
+@SuppressWarnings("serial")
 public class CGBouncingBallSwingTimer extends JFrame {
 
 	private static final int CANVAS_WIDTH = 640;
@@ -34,6 +35,7 @@ public class CGBouncingBallSwingTimer extends JFrame {
 		setTitle("Bouncing ball");
 		setVisible(true);
 
+		/*
 		ActionListener updateTask = new ActionListener() {
 
 			@Override
@@ -44,19 +46,36 @@ public class CGBouncingBallSwingTimer extends JFrame {
 		};
 
 		new Timer(UPDATE_PERIOD, updateTask).start();
+		*/
+
+		new Thread() {
+			@Override
+			public void run() {
+				while (true) {
+					update();
+					repaint();
+					try {
+						Thread.sleep(UPDATE_PERIOD);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}.start();
 	}
 
 	protected void update() {
 
 		x += xSpeed;
 		y += ySpeed;
-		
+
 		if (x > CANVAS_WIDTH - size || x < 0) {
-			xSpeed = - xSpeed;
+			xSpeed = -xSpeed;
 		}
-		
+
 		if (y > CANVAS_HEIGHT - size || y < 0) {
-			ySpeed = - ySpeed;
+			ySpeed = -ySpeed;
 		}
 
 	}
