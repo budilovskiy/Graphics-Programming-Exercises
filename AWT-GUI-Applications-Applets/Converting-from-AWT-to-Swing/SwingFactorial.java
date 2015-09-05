@@ -1,3 +1,19 @@
+/*
+ * 4.1  Exercise: Converting from AWT to Swing
+ * Convert all the previous AWT exercises (AWTCounter, AWTAccumulator, 
+ * AWTFactorial, etc.) to Swing applications (called SwingCounter, 
+ * SwingAccumulator, SwingFactorial, etc.).
+ * Notes:
+ *  - Swing Components are kept in package javax.swing. They begin with 
+ * a prefix "J", e.g., JButton, JLabel, JFrame.
+ *  - Swing Components are to be added onto the ContentPane of the 
+ * top-level container JFrame. You can retrieve the ContentPane via 
+ * method getContentPane() from a JFrame.
+ * 
+ * Container cp = getContentPane();  // of JFrame
+ * cp.setLayout(......);
+ * cp.add(......);
+ */
 package graphics.programming.exercises;
 
 import java.awt.Container;
