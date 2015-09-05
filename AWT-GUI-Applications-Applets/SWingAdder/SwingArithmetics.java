@@ -24,7 +24,7 @@ public class SwingArithmetics extends JFrame {
 	public SwingArithmetics() {
 		// Swing components must be added to the ContentPane.
 		Container cp = getContentPane();
-		// Set this Container to grid layout of 6 rows and 2 columns
+		// Set this Container to grid layout of 4 rows and 2 columns
 		cp.setLayout(new GridLayout(6, 2, 10, 3));
 
 		BtnListener listener = new BtnListener();
@@ -90,28 +90,31 @@ public class SwingArithmetics extends JFrame {
 	private class BtnListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			double result = 0;
 			try {
-				// Convert numbers from String to int
+				// Convert numbers from String to double
 				double num1 = Double.parseDouble(tfNum1.getText());
 				double num2 = Double.parseDouble(tfNum2.getText());
-				// Display result of operation according to button that fired ActionEvent 
+				// Calculate result of operation according to button that fired ActionEvent 
 				switch (e.getActionCommand()) {
 				case "+":
-					tfResult.setText((num1 + num2) + "");
+					result = num1 + num2;
 					break;
 				case "-":
-					tfResult.setText((num1 - num2) + "");
+					result = num1 - num2;
 					break;
 				case "*":
-					tfResult.setText((num1 * num2) + "");
+					result = num1 * num2;
 					break;
 				case "/":
-					tfResult.setText((num1 / num2) + "");
+					result = num1 / num2;
 					break;
 				case "%":
-					tfResult.setText((num1 % num2) + "");
+					result = num1 % num2;
 					break;
 				}
+				// Display result
+				tfResult.setText(result + "");
 			} catch (NumberFormatException ex) { // if parseDouble throws an exception
 				tfResult.setText("Enter numbers");
 			}
