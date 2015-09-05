@@ -19,7 +19,7 @@ import javax.swing.SwingUtilities;
 public class SwingArithmetics extends JFrame {
 
 	private JTextField tfNum1, tfNum2, tfResult;
-	private JButton btnAdd, btnClear, btnProduct, btnDivide, btnRemind;
+	private JButton btnAdd, btnClear, btnProduct, btnSubtract, btnDivide, btnRemind;
 
 	public SwingArithmetics() {
 		// Swing components must be added to the ContentPane.
@@ -54,9 +54,9 @@ public class SwingArithmetics extends JFrame {
 		btnAdd.addActionListener(listener);
 		cp.add(btnAdd);
 
-		btnClear = new JButton("-");
-		btnClear.addActionListener(listener);
-		cp.add(btnClear);
+		btnSubtract = new JButton("-");
+		btnSubtract.addActionListener(listener);
+		cp.add(btnSubtract);
 
 		btnProduct = new JButton("*");
 		btnProduct.addActionListener(listener);
