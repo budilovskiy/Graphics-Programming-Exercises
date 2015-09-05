@@ -24,7 +24,7 @@ public class SwingArithmetics extends JFrame {
 	public SwingArithmetics() {
 		// Swing components must be added to the ContentPane.
 		Container cp = getContentPane();
-		// Set this Container to grid layout of 4 rows and 2 columns
+		// Set this Container to grid layout of 6 rows and 2 columns
 		cp.setLayout(new GridLayout(6, 2, 10, 3));
 
 		BtnListener listener = new BtnListener();
