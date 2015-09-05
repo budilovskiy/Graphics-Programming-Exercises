@@ -69,7 +69,7 @@ public class SwingFactorial extends JFrame {
 		cp.add(tfOutput);
 		
 		// adjusting properties of this JFrame
-		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(500, 75);
 		setTitle("Factorial calculator");
 		setVisible(true);
