@@ -1,5 +1,6 @@
 package graphics.programming.exercises;
 
+import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,35 +23,34 @@ public class SwingFactorial extends JFrame {
 	// constructor to initialize components
 	public SwingFactorial() {
 		// set FlowLayout to this JFrame
-		setLayout(new FlowLayout());
+		Container cp = getContentPane();
+		cp.setLayout(new FlowLayout());
 		
 		// create new listener
 		InnerListener listener = new InnerListener();
 		
 		// create input JLabel 
-		lblInput = new JLabel("Enter number");
-		add(lblInput);
+		cp.add(new JLabel("Enter number"));
 		
 		// create input JTextField
 		tfInput = new JTextField("", 5);
 		tfInput.setHorizontalAlignment(JTextField.RIGHT);
 		tfInput.addActionListener(listener);
-		add(tfInput);
+		cp.add(tfInput);
 		
 		// create calculation JButton
 		btnCalc = new JButton("Calculate");
 		btnCalc.addActionListener(listener);
-		add(btnCalc);
+		cp.add(btnCalc);
 		
 		// create output JLabel
-		lblOutput = new JLabel("Factorial");
-		add(lblOutput);
+		cp.add(new JLabel("Factorial"));
 		
 		// create JTextField to display result of factorial calculation
 		tfOutput = new JTextField("", 13);
 		tfOutput.setEditable(false);
 		tfOutput.setHorizontalAlignment(JTextField.RIGHT);
-		add(tfOutput);
+		cp.add(tfOutput);
 		
 		// adjusting properties of this JFrame
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
