@@ -27,6 +27,7 @@ public class SwingArithmetics extends JFrame {
 		// Set this Container to grid layout of 4 rows and 2 columns
 		cp.setLayout(new GridLayout(6, 2, 10, 3));
 
+		// listener is an instance of inner named class ButtonListener
 		BtnListener listener = new BtnListener();
 
 		// Create and add components the ContentPane
