@@ -58,8 +58,7 @@ public class SWingAdder extends JFrame {
 					double num1 = Double.parseDouble(tfNum1.getText());
 					double num2 = Double.parseDouble(tfNum2.getText());
 					tfResult.setText((num1 + num2) + "");
-				} catch (NumberFormatException ex) { // if parseDouble throws an
-														// exception
+				} catch (NumberFormatException ex) { // if parseDouble throws an exception
 					tfResult.setText("Enter numbers");
 				}
 			}
