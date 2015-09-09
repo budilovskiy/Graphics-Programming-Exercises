@@ -122,64 +122,64 @@ public class Sudoku extends JFrame {
 		menu = new JMenuBar();
 		
 		JMenu fileMenu = new JMenu("File");
-        JMenuItem newGameItem = new JMenuItem("New game");
-        newGameItem.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-        fileMenu.add(newGameItem);
-        JMenuItem resetGameItem = new JMenuItem("Reset game");
-        resetGameItem.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-        fileMenu.add(resetGameItem);
-        JMenuItem exitItem = new JMenuItem("Exit");
-        exitItem.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
-        fileMenu.add(exitItem);
-        menu.add(fileMenu);
-        
-        JMenu optionsMenu = new JMenu("Options");
-        JMenu difficultyMenu = new JMenu("Difficulty level");
-        optionsMenu.add(difficultyMenu);
-        DifficultyMenuListener dmlistener = new DifficultyMenuListener();
-        JMenuItem level1Item = new JMenuItem("Level 1");
-        level1Item.addActionListener(dmlistener);
-        difficultyMenu.add(level1Item);
-        JMenuItem level2Item = new JMenuItem("Level 2");
-        level2Item.addActionListener(dmlistener);
-        difficultyMenu.add(level2Item);
-        JMenuItem level3Item = new JMenuItem("Level 3");
-        level3Item.addActionListener(dmlistener);
-        difficultyMenu.add(level3Item);
-        JMenuItem level4Item = new JMenuItem("Level 4");
-        level4Item.addActionListener(dmlistener);
-        difficultyMenu.add(level4Item);
-        JMenuItem level5Item = new JMenuItem("Level 5");
-        level5Item.addActionListener(dmlistener);
-        difficultyMenu.add(level5Item);
-        JMenuItem level6Item = new JMenuItem("Level 6");
-        level6Item.addActionListener(dmlistener);
-        difficultyMenu.add(level6Item);
-        JMenuItem level7Item = new JMenuItem("Level 7");
-        level7Item.addActionListener(dmlistener);
-        difficultyMenu.add(level7Item);
-        menu.add(optionsMenu);
-        
-        setJMenuBar(menu);
-
-        // Initialize game
+	        JMenuItem newGameItem = new JMenuItem("New game");
+	        newGameItem.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+			});
+	        fileMenu.add(newGameItem);
+	        JMenuItem resetGameItem = new JMenuItem("Reset game");
+	        resetGameItem.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+			});
+	        fileMenu.add(resetGameItem);
+	        JMenuItem exitItem = new JMenuItem("Exit");
+	        exitItem.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					System.exit(0);
+				}
+			});
+	        fileMenu.add(exitItem);
+	        menu.add(fileMenu);
+	        
+	        JMenu optionsMenu = new JMenu("Options");
+	        JMenu difficultyMenu = new JMenu("Difficulty level");
+	        optionsMenu.add(difficultyMenu);
+	        DifficultyMenuListener dmlistener = new DifficultyMenuListener();
+	        JMenuItem level1Item = new JMenuItem("Level 1");
+	        level1Item.addActionListener(dmlistener);
+	        difficultyMenu.add(level1Item);
+	        JMenuItem level2Item = new JMenuItem("Level 2");
+	        level2Item.addActionListener(dmlistener);
+	        difficultyMenu.add(level2Item);
+	        JMenuItem level3Item = new JMenuItem("Level 3");
+	        level3Item.addActionListener(dmlistener);
+	        difficultyMenu.add(level3Item);
+	        JMenuItem level4Item = new JMenuItem("Level 4");
+	        level4Item.addActionListener(dmlistener);
+	        difficultyMenu.add(level4Item);
+	        JMenuItem level5Item = new JMenuItem("Level 5");
+	        level5Item.addActionListener(dmlistener);
+	        difficultyMenu.add(level5Item);
+	        JMenuItem level6Item = new JMenuItem("Level 6");
+	        level6Item.addActionListener(dmlistener);
+	        difficultyMenu.add(level6Item);
+	        JMenuItem level7Item = new JMenuItem("Level 7");
+	        level7Item.addActionListener(dmlistener);
+	        difficultyMenu.add(level7Item);
+	        menu.add(optionsMenu);
+	        
+	        setJMenuBar(menu);
+	
+	        // Initialize game
 		initGame(board);
 
 		// Set the size of the content-pane and pack all the components
